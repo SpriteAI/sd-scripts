@@ -1,0 +1,57 @@
+[model_arguments]
+v2 = false
+v_parameterization = false
+pretrained_model_name_or_path = "prompthero/openjourney-v4"
+
+[additional_network_arguments]
+no_metadata = false
+unet_lr = 0.0001
+text_encoder_lr = 5e-5
+network_module = "networks.lora"
+network_dim = 64
+network_alpha = 1
+network_train_unet_only = false
+network_train_text_encoder_only = false
+
+[optimizer_arguments]
+optimizer_type = "AdamW8bit"
+max_grad_norm = 1.0
+learning_rate = 0.0001
+lr_scheduler = "constant"
+
+[dataset_arguments]
+cache_latents = true
+debug_dataset = false
+
+[training_arguments]
+output_dir = "/home/ec2-user/dev/tazo/output/food-loot-icon-5"
+output_name = "icon"
+save_precision = "fp16"
+save_state = false
+save_every_n_epochs = 1
+train_batch_size = 13
+max_token_length = 75
+mem_eff_attn = false
+xformers = true
+max_train_epochs = 80
+max_data_loader_n_workers = 8
+persistent_data_loader_workers = true
+gradient_checkpointing = false
+gradient_accumulation_steps = 1
+mixed_precision = "fp16"
+logging_dir = "/home/ec2-user/dev/tazo/output/food-loot-icon-5"
+log_prefix = "icon"
+log_with = "wandb"
+log_tracker_name = "kohya-lora"
+# wandb_api_key = "7cc672a86aee6a1809d548b95b9543a03b114f8e"
+lowram = true
+
+[sample_prompt_arguments]
+sample_every_n_epochs = 1
+sample_sampler = "dpmsolver++"
+
+[dreambooth_arguments]
+prior_loss_weight = 1.0
+
+[saving_arguments]
+save_model_as = "safetensors"

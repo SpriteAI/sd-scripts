@@ -1,0 +1,22 @@
+[general]
+enable_bucket = true
+shuffle_caption = false
+keep_tokens = 0
+bucket_reso_steps = 64
+bucket_no_upscale = false
+
+[[datasets]]
+resolution = 512
+min_bucket_reso = 256
+max_bucket_reso = 1024
+caption_dropout_rate = 0
+caption_tag_dropout_rate = 0
+caption_dropout_every_n_epochs = 0
+flip_aug = true
+color_aug = false
+
+[[datasets.subsets]]
+# image_dir = "/home/ec2-user/dev/tazo/datasets/food-loot-icons-upscaled"
+image_dir = "/home/ec2-user/dev/tazo/datasets/food-loot-icons-blip-captioned"
+num_repeats = 10
+caption_extension = ".txt"

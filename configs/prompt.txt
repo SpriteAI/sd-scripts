@@ -1,0 +1,6 @@
+  mksks, fish stew--w 512 --h 512 --l 7 --s 28   
+  mksks, fish pie --w 512 --h 512 --l 7 --s 28   
+  mksks, apple --w 512 --h 512 --l 7 --s 28   
+  mksks, blue apple --w 512 --h 512 --l 7 --s 28   
+  mksks, hog --w 512 --h 512 --l 7 --s 28   
+  mksks, yellow hog --w 512 --h 512 --l 7 --s 28   
